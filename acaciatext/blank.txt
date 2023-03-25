@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>KOR welcome page</title>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/korwelcome.css" />
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/droplist.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/popup.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/tooltip.css">
+<style>
+
+img {background-color:transparent;
+height:170px;
+width:170px;
+padding: 10px;
+float: left;
+}
+
+#imgrgt  {background-color:transparent;
+height:170px;
+width:170px;
+padding: 10px;
+float: right;
+}
+
+
+p   {margin: 10px;
+font-size:14px;
+padding-left:10px;
+padding-right:10px;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div id="headerwrap">
+<div id="leftheader">
+<br>
+<a class="selected" href="">&nbsp;Welcome&nbsp;</a>
+<a href="./login.html">&nbsp;Log In &nbsp;</a>
+</div>
+<div id="midheader"> KOR Healthy Eating Club </div >
+<div id="rightheader">
+<br>
+<a href="">Search site</a>            <!-- ie site map with details of each page   -->
+<a href="">Information</a>  		  <!-- and disclaimer   -->
+</div>
+</div>
+<br>
+<div id="pagetitlewrap">
+<div id="pagetitle">
+<br><br>
+</div>
+</div>
+<br>
+<div id="contentwrap">
+<div id="leftcolumn">
+<br><br>
+</div>
+<div id="midcolumn">
+<br><br>
+</div>
+<div id="rightcolumn">
+<br><br>
+</div>
+</div>
+<br>
+<div id="pagetitlewrap">
+<div id="pagetitle">
+<br><br>
+</div>
+</div>
+<br>
+<div id="footerwrap">
+<div id="footer">
+<div class="popup" onclick="myFunction1()">Contact us
+<span class="popuptext" id="myPopup1">call Julie - her phone works better than mine</span>
+</div>&emsp;
+<div class="popup" onclick="myFunction2()">Terms of use
+<span class="popuptext" id="myPopup2">Opinions are varied. Nothing is true forever</span>
+</div>&emsp;
+<div class="popup" onclick="myFunction3()">Privacy
+<span class="popuptext" id="myPopup3">Your data is stored on your pc</span>
+</div>&emsp;
+<div class="popup" onclick="myFunction4()">About us
+<span class="popuptext" id="myPopup4">I'm indescribable, Julie is in charge</span>
+</div>
+&emsp;
+</div>
+</div>
+</div>
+
+<script>
+function myFunction1() {
+var popup = document.getElementById("myPopup1");
+popup.classList.toggle("show");}
+
+function myFunction2() {
+var popup = document.getElementById("myPopup2");
+popup.classList.toggle("show");}
+
+function myFunction3() {
+var popup = document.getElementById("myPopup3");
+popup.classList.toggle("show"); }
+
+function myFunction4() {
+var popup = document.getElementById("myPopup4");
+popup.classList.toggle("show"); }
+</script>
+
+</body>
+</html>
+
+
+<!-- <SCRIPT TYPE="text/javascript"> function popup2(mylink, windowname) {
+if (! window.focus)return true; var href;
+if (typeof(mylink) == 'string') href=mylink;
+else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+return false;
+}
+</SCRIPT>                                            -->

@@ -1,0 +1,54 @@
+/*******************************************************************************
+********************************************************************************
+**
+* - GENERAL/BODY
+*
+* - CONTENT
+**
+********************************************************************************
+ ******************************************************************************/
+
+
+
+
+/* CONTENT ------------------------------------------------------------------ */
+
+#smallFeatures
+{
+	position: static;
+	border: none;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 0;
+}
+
+#smallFeatures .feature
+{
+	clear: none;
+	float: left;
+	width: 24.9%;
+	border-top: 0 none #FFFFFF;
+	padding: 0;
+	background-color: transparent;
+}
+
+#smallFeatures .feature h3
+{
+	clear: none;
+	margin: 0 0 15px 0;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	padding: 8px 15px;
+	background-color: #EEEEEE;
+	background-image: none;
+}
+
+#smallFeatures .feature p
+{
+	margin: 0 15px 15px 15px;
+}
+
+#smallFeatures .featureContinue
+{
+	border-top: 1px dashed #CCCCCC;
+	padding-top: 0.25em;
+}

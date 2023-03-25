@@ -1,0 +1,41 @@
+   .acacia  {
+            font-size:25px;
+            font-weight:700;
+            color: #930;
+          }
+
+  header ul {     
+            font-size:15px;
+            font-weight:700;  
+            color:black;     
+            padding:0;
+            margin:0;
+            background-color: #930;
+            width: 60%;
+            height: 60px;
+            border-radius: 6px 6px 6px 6px;
+            float:right;
+            }
+  header ul li{
+            display: inline;
+            margin:10px;
+            padding-top:10px;
+            float:right;
+      }
+  header ul li a {
+            text-decoration: none;
+            padding: .25em 1em;
+            border-bottom: solid 1px #39f;
+            border-top: solid 1px #39f;
+            border-right: solid 1px #39f;
+            background-color:lightgrey;
+            width:200px;
+            height:125px;
+            padding:10px;
+            border-radius: 10px 10px 10px 10px;
+            display: inline; 
+            }
+  header ul li a:hover {
+            background-color: #fff;
+            color: blue;
+            }

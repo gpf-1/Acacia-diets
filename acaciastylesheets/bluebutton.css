@@ -1,0 +1,30 @@
+#korpages .bluebutton a {
+    box-shadow: 1px -1px 0px 2px #bac0d1;
+	background-color:#afc8ef;
+
+	border-radius:6px;
+	border:1px solid #4e6096;
+	margin:0.25em;
+	
+	cursor:pointer;
+	color:white;
+	
+	font-family:Times Roman;
+	font-size:20px;
+	font-weight:bold;
+    padding:15px 15px;
+
+	text-decoration:none;
+	text-shadow:-1px 1px 50px #0d1424;
+	height:20px;
+	width:60px;
+}
+#korpages.bluebutton a:hover {
+	background-color:#4f6efe;
+}
+#korpages .bluebutton a:active {
+	position:relative;
+	top:1px;
+}
+    
+

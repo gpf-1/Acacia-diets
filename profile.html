@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>KOR BMIrange</title>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/blank.css" />
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/droplist.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/popup.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/tooltip.css">
+
+<style>
+
+body { background-color:#efefed }
+    input   {font-size:15px;color:blue;}
+    .c8      {font-size:14px;color:blue;}
+    h1      {text-align:left; color:blue;}
+    h2      {text-align:left; color:blue;}
+  
+button {
+    background-color:#ffeeff;
+    border: none;
+    color:black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 50px;
+	height:20px;
+    border: 1px;
+	 }
+.review{
+   width:20px;
+  } 
+    }
+ 
+</style>
+  </head>
+  <body>
+  <div id="wrapper">
+  <div id="headerwrap">
+<div id="leftheader">
+    <a  href="./log-out.html">&nbsp;&nbsp;Log Out &nbsp;</a>
+	<a href="./meals.html">&nbsp;Record Meals and New Recipes&nbsp;</a>
+	<br><br>
+	<a href="./map.html">&nbsp;Site Map &nbsp;</a>
+	<a href="./activity.html">&nbsp;Record Activity &nbsp;</a>
+</div>
+<div id="midheader"> KOR Healthy Eating Club </div >
+<div id="rightheader">
+    <a href="./history.html">Records</a> 
+	<a href="./profile.html">Profile, Change Targets</a> 
+	<br><br>
+	<a href="./analysis.html">Diet balance</a>
+  	<a href="./information.html">Articles and Information</a>	<!-- and disclaimer   -->
+
+
+</div>
+<br>
+</div>
+<br> 	
+	<div id="pagetitlewrap">
+      <div id="leftpagetitle">
+       <h2>Body Mass Index</h2>&emsp;&emsp;Your bmi is&nbsp;
+<!--       <script> <function:calcbmi>     </script>  -->
+	  <button class="textbox"
+              id="bmivalue"
+              value="99"></button>
+			    <!-- should show bmi value here, but doesnt! -->
+     <br>	<br>
+      <img src="./acaciaimages/bmirange.jpg" alt="bmibar">
+	  
+	  </div>    
+	  <div id="rightpagetable" style="margin-left:15px;">
+	  <p>Healthy weight for your height</p>from
+        <div class="c8">
+          stones&emsp;&emsp;&nbsp;pounds&emsp;&emsp;&emsp;&emsp;pounds&emsp;&emsp;&emsp;&emsp;&emsp;kilos
+        </div>
+		  <button class="textbox" id="lowstone" value="99"></button> 
+		  <button class="textbox" id="lowlbs" value="99"></button> &emsp;&emsp; 
+		  <button class="textbox" id="lowlbswt" value="99"></button> &emsp;&emsp; 
+		  <button class="textbox" id="hlowkilo" value="99"></button>
+        <br>
+        to
+        <div class="c8">
+          stones&emsp;&emsp;&nbsp;pounds&emsp;&emsp;&emsp;&emsp;pounds&emsp;&emsp;&emsp;&emsp;&emsp;kilos
+        </div>
+		<button class="textbox" id="highstone" value="99"></button> 
+		<button class="textbox" id="highlbs" value="99"></button> &emsp;&emsp; 
+		<button class="textbox" id="highlbswt"value="99"></button> &emsp;&emsp; 
+		<button class="textbox" id="highkilo" value="99"></button>
+        <br>
+        <div class="c8"> <br> </div>
+        <br>
+        Target weight is
+        <div class="c8">
+        stones&emsp;&emsp;&nbsp;pounds&emsp;&emsp;&emsp;&emsp;pounds&emsp;&emsp;&emsp;&emsp;&emsp;kilos&emsp;&emsp;&emsp;&emsp;review?
+        </div>
+		<button class="textbox" id="targetstone" value="99"></button> 
+		<button class="textbox" id="targetlbs" value="99"></button> &emsp;&emsp; 
+		<button class="textbox" id="targetlbswt" value="99"></button> &emsp;&emsp; 
+		<button class="textbox" id="targetkilo"  value="99"></button>
+		<button class="review" id="reviewweight" value="amend"></button> 
+		
+<br>
+		Target date
+        <div class="c8">
+        day&emsp;&emsp;&nbsp;month&emsp;&emsp;&emsp;&emsp;year&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;review?
+        </div>
+		<button class="textbox" id="targetday" value="99"></button> 
+		<button class="textbox" id="targetmonth" value="99"></button> 
+		<button class="textbox" id="targetyear" value="99"></button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<button class="review" id="reviewdate" value="amend"></button> 
+		<br>
+      </div>
+	  <br>
+ 
+	<div id="bottomcontentwrap">
+<div id="bottomcontent">
+<br>
+The exercise/ food calorie graph goes here
+<br><br><br>
+<img src="./acaciaimages/graph.jpg">
+<br>
+</div>
+
+</div>
+<br>
+<div id="commentwrap">
+<div id="comment">
+<br>
+comparison of food type pie and food calorie bar charts go here
+<br><br>
+<br>
+<img src="./acaciaimages/piecharts.jpg">
+<br><br>
+<img src="./acaciaimages/barchart.jpg">
+<br>
+</div>
+</div>
+</div>
+  <div id="footerwrap">
+    <div id="footer">
+	  <div class="popup" onclick="myFunction1()">Contact us
+        <span class="popuptext" id="myPopup1">call Julie - her phone works better than mine</span>
+      </div>&emsp;
+      <div class="popup" onclick="myFunction2()">Terms of use
+        <span class="popuptext" id="myPopup2">Opinions are varied. Nothing is true forever</span>
+      </div>&emsp;
+      <div class="popup" onclick="myFunction3()">Privacy
+        <span class="popuptext" id="myPopup3">Your data is stored on your pc</span>
+      </div>&emsp;
+      <div class="popup" onclick="myFunction4()">About us
+        <span class="popuptext" id="myPopup4">I'm indescribable, Julie is in charge</span>
+      </div>&emsp;
+    </div>
+	</div>
+  </script>
+<script>
+function myFunction1() {
+    var popup = document.getElementById("myPopup1");
+    popup.classList.toggle("show");
+	}
+</script>
+<script>
+function myFunction2() {
+	 var popup = document.getElementById("myPopup2");
+    popup.classList.toggle("show");}
+</script>
+<script>
+function myFunction3() {
+	var popup = document.getElementById("myPopup3");
+    popup.classList.toggle("show"); }
+</script>
+<script>
+function myFunction4() {
+	var popup = document.getElementById("myPopup4");
+    popup.classList.toggle("show"); }
+</script>
+</body>
+</html>
+
+
+<!-- <SCRIPT TYPE="text/javascript"> function popup2(mylink, windowname) { 
+if (! window.focus)return true; var href; 
+if (typeof(mylink) == 'string') href=mylink; 
+else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); 
+return false; 
+} 
+</SCRIPT>                                            -->
+

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author"
+        content="copyright Â(c)2018 GPFlint">
+
+  <title>newuser</title>
+   <link rel="stylesheet" href="./acaciastylesheets/nav_panel.css">
+   <link rel="stylesheet" href="./acaciastylesheets/piechart.css">
+   <link rel="stylesheet" href="./acaciastylesheets/dropbutton.css">
+   <link rel="stylesheet" href="./acaciastylesheets/columns.css">
+   <link rel="stylesheet" href="./acaciastylesheets/nav_panel.css">
+   <link rel="stylesheet" href="./acaciastylesheets/site_panel.css">
+   <link rel="stylesheet" href="./acaciastylesheets/modalbox.css">
+ 
+  <style>
+* {
+  margin :0px;
+  padding :0px;
+  box-sizing: border-box;
+  }
+   header, row, section, navigation { display: block; }
+   
+/* Style the body */
+   
+    body    {background-color:linen;
+             margin:20px;
+             max-width:800px;
+             max-height:2000px;
+             margin: auto;
+             }
+    img     {background-color:transparent;
+            margin-left:150px;
+            }
+    h1      {text-align:left; color:blue;}
+    h2      {text-align:left; color:blue;}
+    p       {font-size:20px; }
+    .selected{
+            background-color: lemonchiffon;
+            font-weight:900;
+            color:red;
+            }
+/* thinner break line space*/	
+ 
+.c6     {font-size:6px;} 
+.c8     {font-size:8px;}
+.c12    {font-size:12px;}
+
+/* text over image - Container holding the image and the text */
+
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+	}
+	
+/* values specific to this pie chart */	
+.pie  {font-size:12px;
+      }
+
+.fats {
+    position: absolute;
+    top:100px;
+    left: 100px;
+	}
+.dairy {
+    position: absolute;
+   top: 120px;
+    left: 100px;
+}
+.Vaday {
+    position: absolute;
+   top: 140px;
+    left: 100px;
+}
+.protein {
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    }
+.carbs {
+    position: absolute;
+   top: 180px;
+    left: 100px;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <br>
+    <div class="acacia">
+      Acacia slimming club
+      <ul class="description">
+        <li>
+          <a href="index.html">Services</a>
+        </li>
+        <li>
+          <a href="index.html">About us</a>
+        </li>
+        <li>
+          <a href="enrol.html">Enrol</a>
+        </li>
+        <li>
+          <a href="login.html">Log 1n</a>
+        </li>
+        <li>
+          <a class="selected" href="index.html">Home</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <br>
+  <br>
+
+    <div class="row">
+      <div class="column50">
+	    <div class="column33">
+	      <div class="dropdown">
+	         <button class="dropbutton" style="width:110px;">Carbs</button>
+             <div class="dropdown-content">
+                <a href="#">Complex carbs</a>
+                <a href="#">Simple sugars</a>
+                <a href="#">Fibre</a>
+              </div>
+	       </div>
+		 </div>
+		 <div class="column33">
+	      <div class="dropdown">
+	        <button class="dropbutton" style="width:110px;">Protein</button>
+	        <div class="dropdown-content">
+	            <a href="#">Animal protein</a>
+ 	             <a href="#">Plant protein</a>
+	        </div> 
+	       </div>
+		 </div>
+		 <div class="column33">
+	      <div class="dropdown">
+	         <button class="dropbutton" style="width:110px;">Fats</button>
+             <div class="dropdown-content">
+                <a href="#">Saturated fats</a>
+                <a href="#">Unsaturated fats</a>
+                <a href="#">Polyunsaturated fats</a>
+				<a href="#">Oily fish</a>
+              </div></div>
+	    	</div>
+	   <!-- end of 33% of 50% columns  -->       
+<!-- SVG pie chart analysis of meals over last 7 days
+      calories, nutrition group breakdown,0 ideal pies for both -->
+<div class="c12"><br></div><div class="c12"><br></div><div class="c12"><br></div>
+  <div class="container">
+  <div class="dropdown">
+	  <button class="dropbutton" style="width:300px; background-color:palegoldenrod;">
+	  Best calorie proportions</button>
+	<div class="dropdown-content">
+     
+       <a href="#">The Eat Well Guide</a>
+	   <a href="#">FIVE A DAY</a>   
+	   <a href="#">Safe dieting</a>
+	   <a href="#">Calories in foods</a>
+       <a href="#">NHS Diet Plan</a>
+	   <a href="#"></a>
+	   <a href="#">Making sense of it!</a>
+    </div>
+	</div>
+
+  <svg viewBox="0 0 64 64" class="pie">
+  <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 3 100; 
+  stroke: yelow; stroke-dashoffset: 0;">
+  </circle>
+  <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 8 100; 
+  stroke: red; stroke-dashoffset: -3">
+  </circle>
+  <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 11 100; 
+  stroke: blue; stroke-dashoffset: -11">
+  </circle>
+  <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 16 100; 
+  stroke: orange; stroke-dashoffset: -22">
+  </circle>
+  <circle r="25%" cx="50%" cy="50%" style="stroke-dasharray: 64 100; 
+  stroke: pink; stroke-dashoffset: -38">
+  </circle>
+  <div class="carbs">Carbohydrates 65%</div>
+  <div class="protein">Protein 15%</div>
+  <div class="dairy">Dairy 6%</div>
+  <div class="Vaday">Fruit & Veg 11%</div>
+  <div class="fats">Fats 3%</div>
+</div></div>
+
+      <div class="column50">
+	    <div class="column33">
+	      <div class="dropdown">
+	         <button class="dropbutton" style="width:110px;">Beverages</button>
+             <div class="dropdown-content">
+                <a href="#">Water</a>
+				<a href="#">Fruit juices</a>
+				<a href="#">Shakes & Smoothies</a>
+                <a href="#">Alcohol</a>
+              </div>
+	       </div>
+		 </div>
+		 <div class="column33">
+	      <div class="dropdown">
+	        <button class="dropbutton" style="width:110px;">Supplements</button>
+	        <div class="dropdown-content">
+	             <a href="#">Vitamins</a>
+ 	             <a href="#">Minerals</a>
+				 <a href="#">Phytonutrients</a>
+	        </div> 
+	       </div>
+		 </div><div class="column33">
+	      <div class="dropdown">
+	         <button class="dropbutton" style="width:110px;">Exercise</button>
+             <div class="dropdown-content">
+			     <a href="#">Aerobic Exercise</a>
+ 	             <a href="#">Strength Exercise</a>
+				 <a href="#">Metabolic Rate</a>
+				 <button class="popup" onclick="popup()">
+                    <span class="popuptext" id="myPopup">Balance</span></button>
+            </div>
+	      </div>
+		</div>
+	   <!-- end of 33% of 50% columns  -->
+	<br><p></p><br>
+	<div class="c12"><br></div><div class="c8"><br></div>
+        <p>
+         Hi. I'm Geoff. We're slimming so we can eat more chocolate,
+		turkey, and mince pies this Christmas. 
+		I've lost a stone already.
+		</p><p>
+		Julie wouldn't say what she weighs, just 'too much'. She has
+		lost half a stone though, with just over one more to lose. (She'll deny ever  saying that)
+		</p>
+		<p>You can join in too. Bring a bottle.
+		 </p>
+		
+      <p>
+		Check out the info on this page on carbs, protein, etc.........
+      </p>
+      </div>
+    </div>
+     
+  <nav>
+    <ul>
+      <li><a href="./index.html">Contact us</a></li>
+      <li><a href="./index.html">User agreement</a></li>
+      <li><a href="./index.html">Privacy statement</a></li>
+      <li><a href="./setup_day.html">Input meal</a></li>
+      <li><a href="./index.html">New recipe</a></li>
+      <li><a href=
+      "https://www.nhs.uk/live-well/healthy-weight/start-the-nhs-weight-loss-plan/">
+      NHS diet plan</a></li>
+    </ul>
+  </nav>
+
+  
+  <script>
+// When the user clicks on div, open the popup
+function popup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+
+
+
+
+
+<!-- updated Oct 2018  -->
+
+
+
+
+
+

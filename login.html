@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>enrol</title>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/korwelcome.css" />
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/droplist.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/popup.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/tooltip.css">
+<style>
+body{
+background-color:#efefed }
+img   {
+      background-color:transparent;
+	  margin-right:40px;
+	  float:right;
+}
+
+  /* Styles for input fields */
+   input   {font-size:15px;color:blue;}  
+
+    input[type=text]{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;}
+
+    input[type=submit] {
+    width:50%;
+    background-color: #4CAF50;
+    font-size:18px;
+    margin-left:0px;
+    color: white;
+    padding: 21px 21px;
+    border: none;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  </style>
+</head>
+
+<body>
+ <div id="wrapper">
+    <div id="headerwrap">
+      <div id="leftheader"> 
+	    <br>
+		<a class="selected" href="">&nbsp;Welcome&nbsp;</a>
+		<a href="./login.html">&nbsp;Log In &nbsp;</a>
+	  </div>
+	  <div id="midheader"> KOR Healthy Eating Club </div >
+	  <div id="rightheader">
+		<br>
+		<a href="">Search site</a>            <!-- ie site map with details of each page   -->
+		<a href="">Information</a>  		         <!-- ie disclaimer   -->
+	  </div>
+	 </div>   
+	<br>
+<div id="contentwrap">
+      <div id="leftcolumn">
+	    <br>
+        <br>
+		<label for="email"> &emsp;Email</label> <input type="text"
+             id="email"
+             name="email"
+             placeholder="your email address">
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="password">Password</label> <input type="text"
+             id="password"
+             name="password"
+             placeholder="your password">
+	  </div>
+      <div id="rightcolumn">
+   
+   
+       &emsp;&emsp;&emsp;
+        <br>
+        <br>
+        <br>
+	   <a href="password_reset.html">forgotten password? -
+        <em>Click here.. </em></a><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> <a href="./bmirange.html"><img alt=
+        "nextpage"
+             src="./acaciaimages/arrowright.gif"
+             width="150"
+             height="74">
+        <br></a>
+<br>
+
+      </div>
+    </div>
+	 <!-- 
+  <form action="/login.php"
+        target="_blank">
+          need to validate php to check the database for password & user -->
+		   
+		   
+		   
+      </div>
+
+  <div id="footerwrap">
+    <div id="footer">
+	  <div class="popup" onclick="myFunction1()">Contact us
+        <span class="popuptext" id="myPopup1">call Julie - her phone works better than mine</span>
+      </div>&emsp;
+      <div class="popup" onclick="myFunction2()">Terms of use
+        <span class="popuptext" id="myPopup2">Opinions are varied. Nothing is true forever</span>
+      </div>&emsp;
+      <div class="popup" onclick="myFunction3()">Privacy
+        <span class="popuptext" id="myPopup3">Your data is stored on your pc</span>
+      </div>&emsp;
+      <div class="popup" onclick="myFunction4()">About us
+        <span class="popuptext" id="myPopup4">I'm indescribable, Julie is in charge</span>
+      </div>&emsp;
+    </div>
+  </div>
+
+<script>
+function myFunction1() {
+    var popup = document.getElementById("myPopup1");
+    popup.classList.toggle("show");
+	}
+</script>
+<script>
+function myFunction2() {
+	 var popup = document.getElementById("myPopup2");
+    popup.classList.toggle("show");}
+</script>
+<script>
+function myFunction3() {
+	var popup = document.getElementById("myPopup3");
+    popup.classList.toggle("show"); }
+</script>
+<script>
+function myFunction4() {
+	var popup = document.getElementById("myPopup4");
+    popup.classList.toggle("show"); }
+</script>
+</body>
+</html>

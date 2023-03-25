@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author"
+        content="copyright Â(c)2018 GPFlint">
+
+  <title>newuser</title>
+  <style>
+* {
+    box-sizing: border-box;
+  }
+   header, column, row, section, navigation { display: block; }
+   /* Style the body */
+    body    {background-color:linen;
+             margin:20px;
+             max-width:800px;
+             max-height:2000px;
+             margin: auto;
+       }
+    img      {background-color:transparent;
+           margin-left:150px;
+           }
+    .c8      {font-size:15px;color:blue;}
+    h1      {text-align:left; color:blue;}
+    h2      {text-align:left; color:blue;}
+  button {
+    background-color:white;
+    border: none;
+    color:black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+   textbox button {
+    background-color: white;
+    width: 20px;
+    border: 0px;
+    padding: 25px;
+    margin: 25px;
+  } 
+
+   .acacia  {
+            padding-top: 0px;
+            font-size:30px;
+            font-weight:900;
+        color: #930;
+          }
+
+  header ul {     
+            font-size:15px;
+            font-weight:normal;       
+            padding:0;
+            margin:0;
+            background-color: #930;
+            width: 60%;
+            height: 60px;
+      border-radius: 6px 6px 6px 6px;
+      float:right;
+            }
+  header ul li{
+            display: inline;
+            margin:10px;
+            padding-top:10px;
+            float:right;
+      }
+  header ul li a {
+            text-decoration: none;
+            padding: .25em 1em;
+            border-bottom: solid 1px #39f;
+            border-top: solid 1px #39f;
+            border-right: solid 1px #39f;
+            background-color:lightgreen;
+            width:200px;
+            height:125px;
+            padding:10px;
+            border-radius: 10px 10px 10px 10px;
+            display: inline; 
+            }
+  header ul li a:hover {
+            background-color: #fff;
+            color: #000;
+            }
+
+  nav ul   {            
+            padding-top:20px;
+            margin-right:10px;
+            background-color:#930;
+            color: #000;
+            width: 100%;
+            height: 60px;
+      border-radius: 10px 10px 10px 10px;
+    float:left;
+            } 
+  nav ul li{
+            display: inline;
+           
+            margin:5px; 
+            padding-right:5px;
+           
+                        }
+  nav ul li a {
+            text-decoration: none;
+            padding: .25em 1em;
+            border-bottom: solid 1px #39f;
+            border-top: solid 1px #39f;
+            border-right: solid 1px #39f;
+            background-color:lightgreen;
+            width:200px;
+            height:100px;
+            padding:8px;
+            border-radius: 5px 5px 5px 5px;
+            display: inline; 
+            }
+
+  nav ul li a:hover {
+            background-color: #fff;
+            color: #000;
+            }
+
+  /* Styles for input fields */
+   input   {font-size:15px;color:blue;}  
+    
+
+    input[type=text]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;}
+
+    input[type=submit] {
+    width:100%;
+    background-color: #4CAF50;
+  font-size:18px;
+  margin-left:0px;
+    color: white;
+    padding: 21px 21px;
+    border: none;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Create two columns that float next to eachother */
+    .column{
+    float: left;
+    width: 50%;
+     font-size:20px;
+   background-color: palegoldenrod;
+    color: #000;
+    margin-top: 6px;
+    padding: 15px;
+  }
+
+
+  /* Clear floats after the columns */
+      .row:after {
+    content: "";
+  display: table;
+    clear: both;
+  }
+  .selected   {
+            background-color: lemonchiffon;
+            font-weight:900;
+            color:red;
+            }
+  </style>
+</head>
+
+<body>
+  <header>
+    <br>
+
+    <div class="acacia">
+      Acacia slimming club
+
+      <ul class="description">
+        <li>
+          <a href="">Services</a>
+        </li>
+
+        <li>
+          <a href="">About us</a>
+        </li>
+
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="enrol.html">Enrol</a>
+        </li>
+
+        <li>
+          <a class="selected"
+              href="login.html">Log 1n</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <br>
+  <br>
+
+  <form action="/login.php"
+        target="_blank">
+    <div class="row">
+      <div class="column">
+        <br>
+        <br>
+        <br>
+        <label for="email">Email</label> <input type="text"
+             id="email"
+             name="email"
+             placeholder="your email address">
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="password">Password</label> <input type="text"
+             id="password"
+             name="password"
+             placeholder="your password">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- need to vall php to check the database for password & user -->
+      </div>
+
+      <div class="column">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        &emsp;&emsp;&emsp;&emsp;
+       <a href="password_reset.html">forgotten password? -
+        <em>Click here.. </em></a><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> <a href="./bmirange.html"><img alt=
+        "nextpage"
+             src="./acaciaimages/arrowright.gif"
+             width="150"
+             height="74">
+        <br></a>
+      </div>
+    </div>
+  </form><em><br></em>
+
+  <nav>
+    <ul id="parent">
+      <li><em><a href="./login.html">Contact us</a></em></li>
+
+      <li><em><a href="./login.html">User agreement</a></em></li>
+
+      <li><em><a href="./login.html">Privacy statement</a></em></li>
+
+      <li><em><a href="./setupday.html">Input meal
+      data</a></em></li>
+
+      <li><em><a href=
+      "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/528193/Eatwell_guide_colour.pdf">
+      Eatwell</a></em></li>
+
+      <li><em><a href=
+      "https://www.nhs.uk/live-well/healthy-weight/start-the-nhs-weight-loss-plan/">
+      NHS diet plan</a></em></li>
+    </ul>
+  </nav><!-- updated Oct 2018  -->
+  <em><script>
+    var height = document.getElementsByName("height")[0].value; 
+
+      var weight = document.getElementsByName("weight")[0].value; 
+
+    function calcbmi(weight,height)
+    bmivalue=weight/height/height; 
+      return bmivalue
+  </script></em>
+</body>
+</html>

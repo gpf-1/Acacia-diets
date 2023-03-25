@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="copyright Â(c)2018 GPFlint">
+
+  <title>newuser</title>
+  <style>
+  * {
+    box-sizing: border-box;
+}
+   header, column, row, section, navigation { display: block; }
+   /* Style the body */
+    body    {background-color:linen;
+             margin:20px;
+             max-width:800px;
+             max-height:2000px;
+             margin: auto;
+			 }
+    img      {background-color:transparent;
+	         margin-left:100px; 
+	         }
+    .c15      {font-size:15px;color:blue;}
+	.c18     {font-size:18px;color:#000;}
+    h1      {text-align:left; color:blue;}
+    h2      {text-align:left; color:blue;}
+	button {
+    background-color:white;
+    border: none;
+    color:black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+   textbox button {
+    background-color: white;
+    width: 20px;
+    border: 0px;
+    padding: 25px;
+    margin: 25px;
+} 
+
+   .acacia  {
+            padding-top: 0px;
+            font-size:30px;
+            font-weight:900;
+		    color: #930;
+	        }
+	
+  header ul {     
+            font-size:15px;
+            font-weight:normal;       
+            padding:0;
+            margin:0;
+            background-color: #930;
+            width: 60%;
+            height: 60px;
+      border-radius: 6px 6px 6px 6px;
+      float:right;
+            }
+  header ul li{
+            display: inline;
+            margin:10px;
+            padding-top:10px;
+            float:right;
+      }
+  header ul li a {
+            text-decoration: none;
+            padding: .25em 1em;
+            border-bottom: solid 1px #39f;
+            border-top: solid 1px #39f;
+            border-right: solid 1px #39f;
+            background-color:lightgreen;
+            width:200px;
+            height:125px;
+            padding:10px;
+            border-radius: 10px 10px 10px 10px;
+            display: inline; 
+            }
+  header ul li a:hover {
+            background-color: #fff;
+            color: #000;
+            }
+  
+ nav ul   {            
+            padding-top:20px;
+            margin-right:10px;
+            background-color:#930;
+            color: #000;
+            width: 100%;
+            height: 60px;
+      border-radius: 10px 10px 10px 10px;
+	  float:left;
+            } 
+  nav ul li{
+            display: inline;
+           
+            margin:5px; 
+            padding-right:5px;
+           
+                        }
+  nav ul li a {
+            text-decoration: none;
+            padding: .25em 1em;
+            border-bottom: solid 1px #39f;
+            border-top: solid 1px #39f;
+            border-right: solid 1px #39f;
+            background-color:lightgreen;
+            width:200px;
+            height:100px;
+            padding:8px;
+            border-radius: 5px 5px 5px 5px;
+            display: inline; 
+            }
+
+  nav ul li a:hover {
+            background-color: #fff;
+            color: #000;
+            }
+
+  /* Styles for input fields */
+   input   {font-size:15px;color:blue;}  
+    
+  input[type=number]  {
+    width: 19%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;}
+	
+	input[type=radio]  {
+    width: 20%;
+	height:35px;
+    padding: 10px;
+    border: 1px solid #ccc;
+	font-size:18px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;}
+
+    input[type=text]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;}
+
+    input[type=submit] {
+    width:100%;
+    background-color: #4CAF50;
+	font-size:18px;
+	margin-left:0px;
+    color: white;
+    padding: 21px 21px;
+    border: none;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Create two columns that float next to eachother */
+    .column{
+    float: left;
+    width: 50%;
+     font-size:20px;
+	 background-color: palegoldenrod;
+    color: #000;
+    margin-top: 6px;
+    padding: 15px;
+	}
+
+
+  /* Clear floats after the columns */
+      .row:after {
+    content: "";
+	display: table;
+    clear: both;
+  }
+  .selected   {
+            background-color: lemonchiffon;
+            font-weight:900;
+            color:red;
+            }
+  </style>
+</head>
+
+<body>
+  <header>
+    <br>
+<div class="acacia">
+   Acacia Healthy Eating
+    <ul class="description">
+      <li class="c1">
+        
+      </li>
+
+     
+	  <li>
+        <a href="login.html">Log 1n</a>
+      </li>
+	  <li>
+        <a href="enrol.html">Services</a>
+      </li>
+
+      <li>
+        <a href="enrol.html">About us</a>
+      </li>
+
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+	   <li>
+        <a class="selected" href="enrol.html">Enrol</a>
+      </li>
+    </ul>
+   </div>
+  </header>
+<br><br>
+
+  <form action="/newlogin.php" target="_blank">
+    <!-- "_blank" forces a new window to be opened after submission   -->
+ 
+    <div class="row">
+      <div class="column"> <div class="c15"><br> </div>
+
+        <label for="fname">First Name</label><br> <input type="text"
+        id="fname" name="firstname" placeholder="Your name..">
+        <br><br><div class="c15"><br></div>
+		<label for="email">Email</label> <input type="text" id=
+        "email" name="email" placeholder="Your email...">
+        <br><br><div class="c15"><br> 
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;day&emsp;&emsp;&emsp;month&emsp;&emsp;&emsp;year</div>
+        Date of birth &emsp; <input class="dob" id="daybirth"
+        type="number" min="01" max="31" name="daybirth" value="">
+        <input class="dob" id="monthbirth" type="number" min="01"
+        max="12" name="monthbirth" value=""> <input class="dob"
+        id="yearbirth" type="number" min="1920" max="2025" name=
+        "yearbirth" value="">
+        <br> <br> 
+        <!--gender-->
+         <div class="c15"><br> </div>
+      
+         <input type="radio" id="male" name="gender" value="male" checked>
+        Male &emsp; <input type="radio" id="female" name="gender" value=
+        "female"> Female
+  
+        <br>
+   <br>  <br> <div class="c18"> 
+	  <input type="checkbox" id="checkeula" name="yeahorneh" value="">
+	   Please check this box to confirm that you<br>&emsp;&nbsp;  have read and accept the user agreement
+	  </div>    
+      </div>
+
+      <div class="column">
+        <!-- height -->
+
+       Height
+      <div class="c15">
+		feet&emsp;&emsp;&emsp;&emsp;inches&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; centimetres
+		</div>
+   
+        <input class="lofty" id="feet" type="number"
+        min="3" max="8" name="feet" value="">
+		  <!--   <label for="inch">inch</label> -->
+		<input class=
+        "lofty" id="inch" type="number" min="01" max="11" name=
+        "inch" value=""> &emsp;&emsp;&emsp; 
+		  <!--  <label for="metres">metres</label><br> -->
+		<input class="lofty"
+        id="metres" type="number" min="1.0" max="2.8" name=
+        "metres" value="">
+        <br><br>
+        <!-- weight -->
+        Weight
+        <div class="c15">
+		stones&emsp;&emsp;&nbsp;pounds&emsp;&emsp;&emsp;&emsp;pounds&emsp;&emsp;&emsp;&emsp;kilos
+        </div>
+		<input class="w-mach" id="stone" type="number" min="3"
+        max="8" name="stone" value=""> <input class="w-mach" id=
+        "lbs" type="number" min="01" max="13" name="lbs" value=
+        ""> &emsp;<input class="w-mach" id="lbswt" type=
+        "number" min="40" max="400" name="lbswt" value="">
+        &emsp; <input class="w-mach" id="kilos" type=
+        "number" min="20" max="200" name="kilos" value="">
+       <div class="c15"><br> </div>
+        <!-- waist -->
+       Waist measurement<div class="c15">
+		 inches&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;centimetres</div>
+		 <input class="waist" id=
+        "inches" type="number" min="10" max="100" name="inches"
+        value=""> &emsp;&emsp;&emsp; <input class="waist" id="cm" type=
+        "number" min="20" max="100" name="cm" value="">  <br> 
+   <br><div class="c18"> 
+	  <input type="checkbox" id="checkeula" name="yeahorneh" value="">
+	   Please check this box to describe your daily <br>&emsp;&nbsp; activity on the next  page. This will help us <br> &nbsp; &emsp; to suggest meals for you.
+	  </div><br><div class="c10"></div>
+	  <a href="./korbmirange.html">
+      <img alt="nextpage" src="./acaciaimages/arrowright.gif" width="150" height="65"></a>
+	 <br>
+	 <!-- no data saved at this time
+	      needs php & jscript >  -->
+		  </div>
+		
+      </div>
+ 
+	 </form>
+	
+	
+    <nav>
+      <ul id="parent">
+        <li>
+          <a href="/index.html">Contact us</a>
+        </li>
+
+        <li>
+          <a href="/enrol.html">User agreement</a>
+        </li>
+
+        <li>
+          <a href="/enrol.html">Privacy statement</a>
+        </li>
+
+        <li>
+          <a href="./setup_day.html">Input meal data</a>
+        </li>
+
+        <li>
+          <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/528193/Eatwell_guide_colour.pdf">
+     Eatwell</a>
+      </li>
+		 <li>
+          <a href="https://www.nhs.uk/live-well/healthy-weight/start-the-nhs-weight-loss-plan/">NHS diet plan</a>
+        </li>
+      </ul>
+    </nav>
+	<!-- updated Oct 2018  -->
+
+<script>
+      var height = document.getElementsByName("height")[0].value; 
+  
+      var weight = document.getElementsByName("weight")[0].value; 
+
+    function calcbmi(weight,height)
+    bmivalue=weight/height/height; 
+      return bmivalue
+  </script> 
+
+</body>
+</html>

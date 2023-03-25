@@ -1,0 +1,64 @@
+@import url("./acaciastylesheets/reset.css";);
+
+
+#biscuitwrapper {
+font-size:15px;
+font-weight:700;
+width:100%;
+margin: 0px 5px 20px 20px;
+}
+
+
+button {
+color:red;
+height:40px;
+width:115px;
+font-size:18px;
+background-image:url("./acaciaimages/biscuit2.gif";);
+font-weight:700;
+border-radius: 6px;
+}
+
+.droplist { 
+display: inline;
+color:black;
+}
+
+.dropbutton {
+margin:0px 6px;
+color: black;
+background-color:pink;
+padding: 4px;
+font-size: 15px;
+border: none;
+float:left;
+}
+
+.dropdown {
+display: inline-block;
+font-family:"Arial";
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #b1f1f1;
+min-width: 140px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+
+.dropdown-content a {
+color: black;
+padding: 10px 10px;
+text-decoration: none;
+display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbutton {background-color: #3e8e41;}

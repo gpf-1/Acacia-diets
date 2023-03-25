@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="copyright Â(c)2018 GPFlint">
+
+  <title>newuser</title>
+  <link rel="stylesheet" href="./acaciastylesheets/nav_panel.css">
+  <link rel="stylesheet" href="./acaciastylesheets/site_panel.css">
+  <link rel="stylesheet" href="./acaciastylesheets/piechart.css">
+  <link rel="stylesheet" href="./acaciastylesheets/select_from_list.css">
+  <link rel="stylesheet" href="./acaciastylesheets/daily_table.css">
+  <link rel="stylesheet" href="./acaciastylesheets/modalbox.css">
+  <link rel="stylesheet" href="./acaciastylesheets/tooltip.css">
+  <link rel="stylesheet" href="./acaciastylesheets/meal_input_slideshow.css">
+ 
+  
+  <!--   include "./includes/variablescomb.php"           -->
+  
+  <style>
+    
+* { box-sizing: border-box; }
+
+header, column, row, section, navigation { display: block; }
+ 
+/* Style the body */
+   
+body    {background-color:linen;
+        margin:20px;
+        max-width:800px;
+        max-height:2000px;
+        margin: auto;
+        }
+.c8      {font-size:15px;color:blue;}
+h1      {text-align:left; color:blue;}
+h2      {text-align:left; color:blue;}
+
+
+button {
+    background-color:#4ff8e6;
+    border: none;
+	font-size: 15px;
+	color:black;
+	margin-left:0px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+       }
+   
+textbox button {
+    background-color: white;
+    width: 20px;
+    border: 0px;
+    padding: 25px;
+    margin: 25px;
+  } 
+  #mealinputs{font-size:15px;
+            padding:1px; 
+			}
+  #goals { display:inline-block; 
+   		   padding-left:10px;
+		   width:100%;
+           float:left;}
+  /* Styles for input fields */
+      
+input   {font-size:14px;color:blue;}	
+select  {font-size:15px;color:blue;}	  
+
+input[type=submit] {    
+    background-color: #dCAFef;
+	border: none;
+    font-size:15px;
+	color:black;
+    margin-left:10px;
+	padding-left: 20px;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+	display: inline-block;
+    }	  
+	
+input[type=number]  {
+    width: 19%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;}
+
+input[type=radio]  {
+    width: 20%;
+    height:35px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size:18px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    resize: vertical;}
+
+input[type=text]{
+border:0;
+    width: 100%;
+	
+    padding: 2px;
+    border: 1px solid #ccc;
+    margin-top:0px;
+    margin-bottom: 0px;
+    resize: vertical;}
+
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+  /* Create two columns that float next to eachother */
+.column{
+    float: left;
+    width: 50%;
+    font-size:20px;
+    background-color:  lemonchiffon;
+    color: #000;
+    margin-top: 6px;
+    padding: 15px;
+    }
+/* Create three unequal columns that float next to eachother */
+.column3{
+    float: left;
+    width: 40%;
+    font-size:20px;
+    background-color:  lemonchiffon;
+    color: #000;
+    margin-top: 6px;
+    margin-left:auto;
+    margin-right:0;
+	padding-right:40px;
+	padding-left:40px;
+    padding: 25px;
+    }
+  .column3m{
+    float: left;
+    width: 18%;
+    font-size:20px;
+    background-color: lemonchiffon;
+    color: #000;
+	margin-top:6px;
+    padding-top: 6px; 
+	padding-left:5px;
+    }
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+.responsive {
+    width:48%;
+    height: auto;
+	}
+	
+.dropbtn{
+	font-size:12px;
+    padding-top:5px;
+    padding-left:3px;
+    padding-right:5px;
+    width:125px;
+	height:25px; 
+	}
+	/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+	}
+.protein {
+    position: absolute;
+    top: 40px;
+    left: 78px;
+    }
+.fats {
+    position: absolute;
+    top: 85px;
+    left: 78px;
+	}
+.dairy {
+    position: absolute;
+    top: 130px;
+    left: 78px;
+}
+.Vaday {
+    position: absolute;
+    top: 175px;
+    left: 78px;
+}
+.carbs {
+    position: absolute;
+    top: 220px;
+    left: 78px;
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <br>
+    <div class="acacia">
+      Acacia slimming
+      <ul class="description">
+        <li>
+          <a href="./enrol.html">Enrol</a>
+        </li>
+        <li>
+          <a href="./login.html">Log in</a>
+        </li>
+        <li>
+          <a href="./index.html">Services</a>
+        </li>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+		<li>
+          <a class="selected" href="./setup_day.html">Start the day</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <br>
+  <section id="goals">
+  <br>
+    <div class="row">
+      <div class="column3">
+        <img src="./acaciaimages/targetscale.jpg" class="responsive">
+        <img src="./acaciaimages/calendar.jpg" class="responsive">
+      </div>
+      <div class="column3m">
+       <select>
+         <option value="0">Bed rest</option>
+         <option value="1">Mostly sitting</option>
+         <option value="2">Mostly standing</option>
+         <option value="3">Long walk</option>
+         <option value="4">Long run</option>
+         <option value="5">Heavy work-out</option>
+	     <option value="6">Strenuous job</option>
+        </select>
+      </div>
+<!-- end of coulmn #1 -->
+      <div class="column3">
+        <img src="./acaciaimages/plate.jpg" class="responsive">
+        <img src="./acaciaimages/scales.jpg" class="responsive">
+      </div>
+    </div>
+<!-- end of coulmn #2 -->
+    <div class="row">
+      <div class="column">
+	 <br>
+	 </svg>
+	<svg width="90" height="80">
+  <circle cx="50" cy="40" r="35" stroke="green" stroke-width="1" fill="lightyellow" />
+</svg><svg width="90" height="80">
+  <circle cx="50" cy="40" r="35" stroke="green" stroke-width="1" fill="pink" />
+</svg><svg width="90" height="80">
+  <circle cx="50" cy="40" r="35" stroke="green" stroke-width="1" fill="lightblue" />
+</svg><svg width="90" height="80">
+  <circle cx="50" cy="40" r="35" stroke="green" stroke-width="1" fill="lightgreen" />
+</svg><br><br>
+	  <div class="c8"><br></div>
+	  <!-- end of column #1 --> 
+    </div>
+    <!-- end of coulmn #1 -->
+	<div class="column">
+      Exercise
+      <br>  <br>  <br>  <br>   <br> 
+      show exercise target, input, show calorires burn
+      <br>  <br>  <br>  <br>  <br>  <br>  <br> 
+      Hydration
+      <br>  <br>  <br>  <br>   <br> 
+      show target v. actual
+	  <br>  <br>  
+	   <div class="c8"><br></div>
+  </div>
+<!-- end of coulmn #2 -->
+</div>
+<!-- end of row -->
+</section>
+  <nav>
+    <ul id="parent">
+      <li>
+        <a href="./setup_day.html">Contact us</a>
+      </li>
+
+      <li>
+        <a href="./setup_day.html">User agreement</a>
+      </li>
+
+      <li>
+        <a href="./setup_day.html">Privacy statement</a>
+      </li>
+
+      <li>
+        <a href="./setup_day.html">Input meal data</a>
+      </li>
+
+      <li>
+        <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/742750/Eatwell_Guide_booklet_2018v4.pdf">
+     Eatwell</a>
+      </li>
+
+      <li>
+        <a href="https://www.nhs.uk/live-well/healthy-weight/start-the-nhs-weight-loss-plan/">NHS diet plan</a>
+        </li>
+    </ul>
+  </nav>
+  <br>
+  
+</body>
+</html>

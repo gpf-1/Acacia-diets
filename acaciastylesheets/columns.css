@@ -1,0 +1,69 @@
+  /* columns defined by class */
+  
+  /* Create TWO equal columns that float next to eachother */
+
+    .column50{
+    display: block; 
+    float: left;
+    width: 50%;
+    font-size:20px;
+    background-color: palegoldenrod;
+    color: #000;
+    margin-top: 6px;
+    padding: 15px;
+  }
+
+    /* Create THREE equal columns that float */
+    
+.column33{
+display: block; 
+    float: left;
+    width: 33%;
+    font-size:20px;
+    background-color:  lemonchiffon;
+    color: #000;
+    margin-top: 6px;
+    margin-left:20;
+    margin-right:0;
+	padding-right:40px;
+	padding-left:55px;
+    padding: 10px;
+    }    
+    
+    /* Custom width columns */
+    
+.column40{
+display: block; 
+    float: left;
+    width: 40%;
+    font-size:20px;
+    background-color:  lemonchiffon;
+    color: #000;
+    margin-top: 6px;
+    margin-left:auto;
+    margin-right:0;
+	padding-right:40px;
+	padding-left:40px;
+    padding: 25px;
+    }
+    
+  .column18{
+  display: block; 
+    float: left;
+    width: 18%;
+    font-size:20px;
+    background-color: lemonchiffon;
+    color: #000;
+	margin-top:6px;
+    padding-top: 6px; 
+	padding-left:5px;
+    }
+    
+    
+  /* Clear floats after the columns */
+      .row:after {
+    content: "";
+  display: table;
+    clear: both;
+  }
+  

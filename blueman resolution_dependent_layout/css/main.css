@@ -1,0 +1,112 @@
+/*******************************************************************************
+********************************************************************************
+**
+* - GENERAL/BODY
+*
+* - CONTENT
+**
+********************************************************************************
+ ******************************************************************************/
+
+
+
+
+/* GENERAL/BODY ------------------------------------------------------------- */
+
+body
+{
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	line-height: 1.4em;
+}
+
+body *
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.clearer
+{
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.hidden
+{
+	position: absolute;
+	left: -9999px;
+}
+
+
+
+
+/* CONTENT ------------------------------------------------------------------ */
+
+#content
+{
+	clear: both;
+	padding: 0 2.5em 1.5em 2.5em;
+}
+
+h2
+{
+	margin-bottom: 0.75em;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 0.25em;
+	font-size: 175%;
+	line-height: 1em;
+}
+
+h3
+{
+	margin-bottom: 1em;
+	font-size: 115%;
+}
+
+h4
+{
+	font-size: 130%;
+}
+
+p
+{
+	margin-bottom: 1em;
+}
+
+ul
+{
+	margin-bottom: 1em;
+}
+
+.feature
+{
+	clear: both;
+	float: none;
+	width: auto;
+	margin: 1em 0 0 0;
+	padding: 0.5em;
+	text-align: justify;
+}
+
+.featureContinue
+{
+	text-align: right;
+}
+
+#smallFeatures
+{
+	width: 100%;
+}
+
+#smallFeatures .feature
+{
+	border-top: 1px solid #CCCCCC;
+	padding-top: 1em;
+}

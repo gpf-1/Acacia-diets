@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author"
+        content="copyright Â(c)2018 GPFlint">
+
+  <title>newuser</title>
+  <style>
+* {
+    box-sizing: border-box;
+  }
+   header, column, row, section, navigation { display: block; }
+   /* Style the body */
+    body    {background-color:linen;
+             margin:20px;
+             max-width:800px;
+             max-height:2000px;
+             margin: auto;
+       }
+   
+    input   {font-size:15px;color:blue;}
+
+    .c8      {font-size:15px;color:blue;}
+    h1      {text-align:left; color:blue;}
+    h2      {text-align:left; color:blue;}
+  button {
+    background-color:white;
+    border: none;
+    color:black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+  }
+   textbox button {
+    background-color: white;
+    width: 20px;
+    border: 0px;
+    padding: 25px;
+    margin: 25px;
+  } 
+
+   .bmi     {width:100%;
+             background-color: lemonchiffon;
+            color: #000;
+              }
+  bmi button{
+         color:white      
+         }  
+   .acacia  {
+            padding-top: 0px;
+            font-size:30px;
+            font-weight:900;
+        color: #930;
+          }
+
+  header ul {     
+            font-size:15px;
+            font-weight:normal;       
+            padding:0;
+            margin:0;
+            background-color: #930;
+            width: 60%;
+            height: 60px;
+      border-radius: 6px 6px 6px 6px;
+      float:right;
+            }
+  header ul li{
+            display: inline;
+            margin:10px;
+            padding-top:10px;
+            float:right;
+      }
+  header ul li a {
+            text-decoration: none;
+            padding: .25em 1em;
+            border-bottom: solid 1px #39f;
+            border-top: solid 1px #39f;
+            border-right: solid 1px #39f;
+            background-color:lightgrey;
+            width:200px;
+            height:125px;
+            padding:10px;
+            border-radius: 10px 10px 10px 10px;
+            display: inline; 
+            }
+  header ul li a:hover {
+            background-color: #fff;
+            color: #000;
+            }
+  nav ul   {            
+            padding-top:20px;
+            margin-right:10px;
+            background-color: lemonchiffon;
+            color: #000;
+            width: 100%;
+            height: 60px;
+      border-radius: 10px 10px 10px 10px;
+            } 
+  nav ul li{
+            display: inline;
+            margin:5px;
+            padding-right:10px;
+           
+                        }
+  nav ul li a {
+            text-decoration: none;
+            padding: .25em 1em;
+            border-bottom: solid 1px #39f;
+            border-top: solid 1px #39f;
+            border-right: solid 1px #39f;
+            background-color:lightgreen;
+            width:200px;
+            height:100px;
+            padding:8px;
+            border-radius: 5px 5px 5px 5px;
+            display: inline; 
+            }
+
+  nav ul li a:hover {
+            background-color: #fff;
+            color: #000;
+            }
+  .selected   {
+            background-color: lemonchiffon;
+            font-weight:900;
+            color:red;
+            }
+  /* Create two columns that float next to eachother */
+    .column{
+    float: left;
+    width: 50%;
+     font-size:20px;
+   background-color: palegoldenrod;
+    color: #000;
+    margin-top: 6px;
+    padding: 15px;
+  }
+
+
+  /* Clear floats after the columns */
+      .row:after {
+    content: "";
+  display: table;
+    clear: both;
+  }
+
+  </style>
+  <style type="text/css">
+button.c1 {float:right; padding-right:260px; background-color:transparent;}
+  </style>
+</head>
+
+<body>
+
+<!--  check for faulty navigation - 
+      there should be values passsed for height (in metres) and weight {in kilos) -->
+<!--  no php or jscript written yet -->
+<!--  no sql written yet -->
+
+
+  <header>
+    <br>
+
+    <div class="acacia">
+      Acacia slimming club
+
+      <ul class="description">
+        <li>
+          <a href="login.html">Log on</a>
+        </li>
+
+        <li>
+          <a href="bmirange.html">Services</a>
+        </li>
+
+        <li>
+          <a href="bmirange.html">About us</a>
+        </li>
+
+        <li>
+          <a href="hello.html">Home</a>
+        </li>
+
+        <li>
+          <a class="selected"
+              href="bmirange.html">BMI</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <br>
+
+  <footer>
+    <br>
+    <br>
+
+    <div class="row">
+      <div class="column">
+      <h2>Body Mass Index</h2>&emsp;&emsp;Your bmi is
+      &nbsp;<script> <function:calcbmi>
+	
+      </script> <button class="textbox"
+              id="bmivalue"
+              value="99"></button>
+			  
+			    <!-- should show bmi value here, but doesnt! -->
+      <br>
+      <br>
+      <img src="./acaciaimages/bmirange.jpg"
+           alt="bmibar"></div>
+
+      <div class="column">
+        <p>Healthy weight for your height</p>from
+
+        <div class="c8">
+          stones&emsp;&emsp;&nbsp;pounds&emsp;&emsp;&emsp;&emsp;pounds&emsp;&emsp;&emsp;&emsp;&emsp;kilos
+        </div><button class="textbox"
+             id="lowstone"
+             value="99"></button> <button class="textbox"
+             id="lowlbs"
+             value="99"></button> &emsp;&emsp; <button class=
+             "textbox"
+             id="lowlbswt"
+             value="99"></button> &emsp;&emsp; <button class=
+             "textbox"
+             id="hlowkilo"
+             value="99"></button>
+        <br>
+        to
+
+        <div class="c8">
+          stones&emsp;&emsp;&nbsp;pounds&emsp;&emsp;&emsp;&emsp;pounds&emsp;&emsp;&emsp;&emsp;&emsp;kilos
+        </div><button class="textbox"
+             id="highstone"
+             value="99"></button> <button class="textbox"
+             id="highlbs"
+             value="99"></button> &emsp;&emsp; <button class=
+             "textbox"
+             id="highlbswt"
+             value="99"></button> &emsp;&emsp; <button class=
+             "textbox"
+             id="highkilo"
+             value="99"></button>
+        <br>
+
+        <div class="c8">
+          <br>
+        </div>
+        <br>
+        Target weight is
+
+        <div class="c8">
+          stones&emsp;&emsp;&nbsp;pounds&emsp;&emsp;&emsp;&emsp;pounds&emsp;&emsp;&emsp;&emsp;&emsp;kilos
+        </div><button class="textbox"
+             id="targetstone"
+             value="99"></button> <button class="textbox"
+             id="targetlbs"
+             value="99"></button> &emsp;&emsp; <button class=
+             "textbox"
+             id="targetlbswt"
+             value="99"></button> &emsp;&emsp; <button class=
+             "textbox"
+             id="targetkilo"
+             value="99"></button>
+        <br>
+
+        <div class="c8">
+          <br>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <br>
+  <br>
+  <button value="Nextpage"
+        onclick="a href:./setupday.html"
+        class="c1">Next page</button>
+  <br>
+  <!-- any new info has not been saved, but there all is calculated from other data -->
+
+  <nav>
+    <ul id="parent">
+      <li>
+        <a href="./bmirange.html">Contact us</a>
+      </li>
+
+      <li>
+        <a href="./bmirange.html">User agreement</a>
+      </li>
+
+      <li>
+        <a href="./bmirange.html">Privacy statement</a>
+      </li>
+
+      <li>
+        <a class="selected"
+            href="./setup_day.html">Input meal data</a>
+      </li>
+
+      <li>
+        <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/528193/Eatwell_guide_colour.pdf">
+     Eatwell</a>
+      </li>
+
+      <li>
+        <a href="https://www.nhs.uk/live-well/healthy-weight/start-the-nhs-weight-loss-plan/">NHS diet plan</a>
+      </li>
+    </ul>
+  </nav>
+ 
+  <!-- updated Oct 2018 -->
+  <script>
+    var height = document.getElementsByName("height")[0].value; 
+
+      var weight = document.getElementsByName("weight")[0].value; 
+
+    function calcbmi(weight,height)
+    bmivalue=weight/height/height; 
+      return bmivalue
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+1. platform used
+
+	check the platform used
+	switch CSS depending on result
+	log the IP address
+
+2. enrolment page     (done)
+
+	confirm acceptance of cookie policy
+	check valid email address
+	allow input as cm, metres, or feet & inches
+	allow wieght input in lbs, stones & lbs, or kilos
+	allow waist input in cm or inches
+	target weight input
+	show BMI & suggest healthy weight
+	ask for a start date - offer a calendar to select a day
+	issue password (1 from each row, in random order)
+		¬!"£$%^&_+/*-=
+		1234567890
+		[]'#><~|}{()
+		qwertyuiopasdfghj
+		klzxcvbnmmmmmm
+		QWERTYUIOPLKJ
+		HGFDSAZXCVBNM
+	
+3. Supplements
+
+	input any suppplements taken / planned
+	
+4. Payment.
+
+	request fee
+
+5. Set up record.
+	
+	give EULA to agree
+	submit & create record
+
+6. login page 	(done)
+
+	check email address is valid
+	check emailaddress is previously in database of users
+	invite enrolment if not in database of users
+	access start page for user
+	record number of accesses made
+	action to take if too many times
+	check computer used is the expected one
+	decline access if not
+
+7. Start page
+
+	show healthy living advice
+	link to profile page for amendments
+	download individuals information
+	populate existing submitted data for last 6 days
+	"your database is incomplete" - give chance to update past days
+	show calendar for 3 months to allow selection of day by radiobutton
+	highlight incomplete days
+	load selected day if requested
+	planned / consumed?
+	request submission of food and liquid intake (br, 11, lun, extr, tea/din, eve, sup)
+	allow own recipes & data to be updated - set a flag
+	(to indicate new data present which could be added to main database)
+	request submission of exercise done
+	invite current weight & waist update
+
+8. data submission & log-out
+
+9. Profile page (allow any changes except the email address)
+
+10. Site admin tasks.
+
+	Create update and expand databases
+	check recipe input / updates. If ok add to main 
+
+11. Site security checks.
+	
+	check for email & password sharing (more than 2 platforms / phones / pcs used)
+	check for database trawling
+	check for too long online
+	database virus check
+
+12. Access has been shared
+
+	suspend access if problems encountered (site security compromised)
+	issue new password
+	lock & request new emailaddress
+
+13. Datbase security
+
+	log clients data in separate database
+	food / recipe / vits & mins in different databases
+	prevent backdoor access to databases
+
+14. Set policies for site.
+
+	write EULA
+		access permissions
+		use of data input
+		period of use
+		security
+		auto logout
+		sharing of information
+		breach actions	
+	
+	decide what actions & when for security breaches
+		site
+		individuals
+
+	how many profile changes allowed in a fixed period
+	actions if sharing is suspected
+	

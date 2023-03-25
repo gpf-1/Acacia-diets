@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+<meta name="generator" content=
+  "CoffeeCup HTML Editor (www.coffeecup.com)">
+  
+<meta name="dcterms.created" content=
+  "Thu, 27 Sep 2018 23:37:27 GMT">
+  
+<meta name="description" content="">
+  <meta name="keywords" content="">
+
+  
+<title></title>
+<!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+  
+<h2>Enrol new user</h2>
+
+  
+
+<form action="/newlogin.php" target="_blank">
+
+    <!-- "_blank" forces a new window to be opened after submission   -->
+
+    First name: <input type="text" name="firstname" value="">
+    
+<br>
+    <br>
+    Date of birth: <input length="4" type="text" name="daybirth"
+    value=""> <input type="text" length="4" name="monthbirth"
+    value=""> <input type="text" length="4" name="yearbirth"
+    value=""> <!-- check for date validity -->
+     <!-- must be at least 16 years old -->
+
+    <br>
+    <br>
+    emailaddress: <input type="text" name="email address" value=
+    "">
+    <br>
+    <br>
+    <input type="radio" name="gender" value="male" checked> Male
+    <br>
+    <input type="radio" name="gender" value="female"> Female
+    <br>
+    <br>
+    <br>
+    height: <input type="text" name="height" value=""> 
+    <!-- convert height to centimetres -->
+
+    <br>
+    <br>
+    weight: <input type="text" name="weight" value=""> 
+    <!-- convert weight to kilos -->
+
+    <br>
+    <br>
+    waist: <input type="text" name="waist" value="">
+    <br>
+    <br>
+    Body Mass Index:
+
+    <p>your bmi is</p><!-- 
+calculate bmi. 
+-->
+
+    <br>
+    bmivalue = weight/height/height
+
+    <p>your bmi is</p>bmivalue <!--
+check bmi table
+declare under / ideal / over / obese. 
+suggest a target weight
+-->
+
+    
+<p>for an ideal BMI, your body weight should be</p>
+<!--
+allow suggestion to be amended
+ask when the target is to be achieved
+show the weekly weight loss needed, and the daily calorie intake necessary
+-->
+    <input type="submit" value=
+    "Submit your date and set up a record">
+  </form>
+</body>
+</html>

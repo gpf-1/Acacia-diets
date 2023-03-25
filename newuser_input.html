@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Geoffrey Flint">
+<title>newuser</title>
+
+<style>
+      body   {
+	         background-color:linen;
+             margin:20px;
+             max-width:800px;
+             max-height:400px;
+             margin: auto}
+      table  {
+	         margin: auto; 
+             width: 90%;
+             text-align:right;}
+      p      {
+	         font-size:18px;}
+      td     {font-size:20px;}
+      h1     {text-align:center; color:blue;}
+      h2     {text-align:center; color:blue;}
+      .header{
+	         background-color: #F1F1F1;
+             text-align: center;
+             padding: 10px;}
+					
+      *      {
+	         box-sizing: border-box;}
+
+/* Style inputs */
+       input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;}
+
+      input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;}
+
+       input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+       .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;}
+
+/* Create two columns that float next to eachother */
+      .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;}
+
+/* Clear floats after the columns */
+      .row:after {
+    content: "";
+    display: table;
+    clear: both;}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+       @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;}
+}   
+</style>
+</head>
+<body>
+<script>
+var height;
+var weight;
+var idweight;
+</script>
+<div class="header">
+<h1>Enrolment Details</h1>
+</div>
+<hr>
+<form action="/newlogin.php" target="_blank">
+<!-- "_blank" forces a new window to be opened after submission   -->
+<!--  first 3 inputs  -->
+<div>
+<table>
+<tr>
+<td>First name:</td>
+<td><input type="text" name="firstname" value=
+"you first name..."></td>
+<td>emailaddress:</td>
+<td><input type="text" name="email address" value=
+"your email..."></td>
+</tr>
+<tr>
+<td>Date of birth:</td>
+<td><input type="text" maxlength="2" size="2" name="daybirth"
+value=""> <input type="text" maxlength="2" size="2" name=
+"monthbirth" value=""> <input type="text" maxlength="4" size="4"
+name="yearbirth" value=""> <!-- check for date validity -->
+<!-- must be at least 18 years old --></td>
+<td>height:</td>
+<td><input type="text" name="height" value=
+"how tall in centimeters..."> 
+<!-- convert height to centimetres -->
+ <script>
+ var height = document.getElementsByName("height")[0].value; 
+</script></td>
+</tr>
+<tr>
+<td>weight:</td>
+<td><input type="text" name="weight" value=
+"your weight in kilos..."> <!-- convert weight to kilos -->
+ <script>
+ var weight = document.getElementsByName("weight")[0].value; 
+</script></td>
+<td>waist measurement:</td>
+<td><input type="text" name="waist" value=
+"in centimeters..."></td>
+</tr>
+</table>
+<br>
+<br>
+<table>
+<tr>
+<td>&emsp;&emsp;&emsp;</td>
+<td>&emsp;&emsp;&emsp;</td>
+<td style="text-align:right;"><input type="radio" name="gender"
+value="male" checked> Male &emsp;</td>
+<td style="text-align:left;"><input type="radio" name="gender"
+value="female"> Female</td>
+<td>&emsp;&emsp;&emsp;</td>
+<td><input style="font-size:20px" type="submit" value=
+"Submit your data and set up a record"></td>
+</tr>
+</table>
+<br></div>
+<div class="container">
+<div style="text-align:center">
+<div class="header">
+<h1>Enrolment Details</h1>
+</div>
+</div>
+<div class="row">
+<div class="column">
+<div id="map" style="width:100%;height:500px"></div>
+</div>
+<div class="column"><label for="fname">First Name</label>
+<input type="text" id="fname" name="firstname" placeholder=
+"Your name.."> <label for="lname">Last Name</label> <input type=
+"text" id="lname" name="lastname" placeholder="Your last name..">
+<label for="country">Country</label> <select id="country" name=
+"country">
+<option value="australia">Australia</option>
+<option value="canada">Canada</option>
+<option value="usa">USA</option>
+</select> <label for="subject">Subject</label> 
+<textarea id="subject" name="subject" placeholder=
+"send a message.." style="height:170px">
+</textarea>
+ <input type="submit" value="Submit"></div>
+</div>
+</div>
+</form>
+<hr>
+<br>
+<div id="bmi">
+<h2>Body Mass Index:</h2>
+<br>
+<!-- calculate bmi  -->
+<p>Your bmi is &nbsp;</p>
+<script>
+ function calcbmi(weight,height)
+ return weight/height/height; 
+</script> <!--
+check bmi table
+declare under / ideal / over / obese. 
+suggest a target weight
+-->
+<p>for an ideal BMI, your body weight should be</p>
+<br>
+<p>Or set a preferred weight target:</p>
+<!--
+allow suggestion to be amended
+ask when the target is to be achieved
+show the weekly weight loss needed, and the daily calorie intake necessary
+--></div>
+</body>
+</html>

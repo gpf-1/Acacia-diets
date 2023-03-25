@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>KOR blank page</title>
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/kor.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/a.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/droplist.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/popup.css">
+<link rel="stylesheet" type="text/css" href="./acaciastylesheets/tooltip.css">
+</head>
+<body>
+<!-- 	<div class="scrncntr">		centre of screen view	-->
+<div id="pagewrap">
+<div id="headerwrap">
+<div id="korlogo"><img src="./acaciaimages/khc.jpg"></div>
+<div id="korpages">
+     <a class="bluebutton" href="./meals.html">Meals</a> 
+	 <a class="bluebutton" href="./activity.html">Activity</a> 
+	 <a class="bluebutton" href="./analysis.html">Analysis</a> 
+	 <a class="bluebutton" href="./information.html">Info</a> 
+     <a class="bluebutton" href="./profile.html">Profile</a>  
+	 <a class="bluebutton" href="./help.html">Help</a> 
+  	 <a class="bluebutton" href="./logout.html">LogOut</a> <!-- and disclaimer   -->
+</div>
+</div>
+<div class="c2wrap">		
+<div class="c2c1">
+<br>
+Fixed width column Page Identity (eg meals,analysis,etc)
+<br>
+</div>
+<div class="c2c2">
+<br>
+Page specific information(eg. conversion table, navigation advice)
+<br>
+</div>
+</div>					
+<div class="c3wrap">
+<div class="c3c1">
+<br>
+Links to trigger information display in centre/right columns; links to modal boxes
+<br>
+</div>
+<div class="c3c2">
+<br>
+Main content, with or without sidebars; Target for sidebar links; table for input
+<br>
+</div>
+<div class="c3c3">
+<br>links forinfo(as column 1); responses from input in main column
+<br>
+</div>
+</div>					
+<div class="c1wrap">
+<div class="c1">
+		<br>
+		single line for triggerered comments,advice, etc,or submit button 
+		<br><br>
+	</div>
+</div>					
+<div id="footerwrap">
+<div id="footer">
+<div class="popup" onclick="myFunction1()">Contact us
+<span class="popuptext" id="myPopup1">call Julie - her phone works better than mine</span>
+</div>&emsp;
+<div class="popup" onclick="myFunction2()">Terms of use
+<span class="popuptext" id="myPopup2">Opinions are varied. Nothing is true forever</span>
+</div>&emsp;
+<div class="popup" onclick="myFunction3()">Privacy
+<span class="popuptext" id="myPopup3">Your data is stored on your pc</span>
+</div>&emsp;
+<div class="popup" onclick="myFunction4()">About us
+<span class="popuptext" id="myPopup4">I'm indescribable, Julie is in charge</span>
+</div>
+&emsp;
+</div>						<!-- close id "footer"	-->
+</div>						<!-- close id "footerwrap"	-->
+</div>						<!-- close id "wrapper"	-->
+<!-- </div>						close centre of screen view	-->
+<script>
+function myFunction1() {
+var popup = document.getElementById("myPopup1");
+popup.classList.toggle("show");}
+function myFunction2() {
+var popup = document.getElementById("myPopup2");
+popup.classList.toggle("show");}
+function myFunction3() {
+var popup = document.getElementById("myPopup3");
+popup.classList.toggle("show"); }
+function myFunction4() {
+var popup = document.getElementById("myPopup4");
+popup.classList.toggle("show"); }
+</script>
+</body>
+</html>
+<!-- <SCRIPT TYPE="text/javascript"> function popup2(mylink, windowname) {
+if (! window.focus)return true; var href;
+if (typeof(mylink) == 'string') href=mylink;
+else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes');
+return false;
+}
+</SCRIPT>                                            -->
+<!--Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus (x1c1) -->

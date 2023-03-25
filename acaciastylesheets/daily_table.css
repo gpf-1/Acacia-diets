@@ -1,0 +1,30 @@
+
+ /*          table style                */
+table {
+       font-family: arial, sans-serif;
+       font-size:12px;
+       border-collapse:collapse;
+       border: 1px solid #ff0000;
+       width: 100%;
+	   }
+
+td, th {
+        border: 1px solid #ff0000;
+        text-align: left;
+        padding: 0px;
+        }
+tr:nth-child(even) {
+    background-color: #fefefe;
+}
+tr:nth-child(odd) {
+    background-color: #efefef;
+}
+#when{width:10%;
+} 
+#what{ width:60%;
+}
+#howmuch{ width:10%;
+}
+#gram{ width:10%;
+}
+/*          end table style                */

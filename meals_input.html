@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="copyright Â(c)2018 GPFlint">
+
+  <title>newuser</title>
+  <link rel="stylesheet" href="./acaciastylesheets/nav_panel.css">
+  <link rel="stylesheet" href="./acaciastylesheets/site_panel.css">
+  <link rel="stylesheet" href="./acaciastylesheets/piechart.css">
+  <link rel="stylesheet" href="./acaciastylesheets/select_from_list.css">
+  <link rel="stylesheet" href="./acaciastylesheets/meal_input_table.css">
+  <link rel="stylesheet" href="./acaciastylesheets/meal_input_modal.css">
+  <link rel="stylesheet" href="./acaciastylesheets/meal_input_tooltip.css">
+  <link rel="stylesheet" href="./acaciastylesheets/meal_input_slideshow.css">
+ 
+  
+  <!--   include "./includes/variablescomb.php"           -->
+  
+  <style>
+    
+* { box-sizing: border-box; }
+
+header, column, row, section, navigation { display: block; }
+ 
+/* Style the body */
+   
+body    {background-color:linen;
+        margin:20px;
+        max-width:800px;
+        max-height:2000px;
+        margin: auto;
+        }
+.c8      {font-size:15px;color:blue;}
+h1      {text-align:left; color:blue;}
+h2      {text-align:left; color:blue;}
+
+
+button {
+    background-color:#4ff8e6;
+    border: none;
+	font-size: 15px;
+	color:black;
+	margin-left:0px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+       }
+   
+textbox button {
+    background-color: white;
+    width: 20px;
+    border: 0px;
+    padding: 25px;
+    margin: 25px;
+  } 
+  #mealinputs{font-size:15px;
+            padding:1px; 
+			}
+  #goals { display:inline-block; 
+   		   padding-left:10px;
+		   width:100%;
+           float:left;}
+  /* Styles for input fields */
+      
+input   {font-size:14px;color:blue;}	
+select  {font-size:15px;color:blue;}	  
+
+input[type=submit] {    
+    background-color: #dCAFef;
+	border: none;
+    font-size:15px;
+	color:black;
+    margin-left:10px;
+	padding-left: 20px;
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+	display: inline-block;
+    }	  
+	
+input[type=number]  {
+    width: 19%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;}
+
+input[type=radio]  {
+    width: 20%;
+    height:35px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-size:18px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    resize: vertical;}
+
+input[type=text]{
+border:0;
+    width: 100%;
+	
+    padding: 2px;
+    border: 1px solid #ccc;
+    margin-top:0px;
+    margin-bottom: 0px;
+    resize: vertical;}
+
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+  /* Create two columns that float next to eachother */
+.column{
+    float: left;
+    width: 50%;
+    font-size:20px;
+    background-color:  lemonchiffon;
+    color: #000;
+    margin-top: 6px;
+    padding: 15px;
+    }
+.column3{
+    float: left;
+    width: 40%;
+    font-size:20px;
+    background-color:  lemonchiffon;
+    color: #000;
+    margin-top: 6px;
+    margin-left:auto;
+    margin-right:0;
+	padding-right:40px;
+	padding-left:40px;
+    padding: 25px;
+    }
+  .column3m{
+    float: left;
+    width: 18%;
+    font-size:20px;
+    background-color: lemonchiffon;
+    color: #000;
+	margin-top:6px;
+    padding-top: 6px; 
+	padding-left:5px;
+    }
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+.responsive {
+    width:48%;
+    height: auto;
+	}
+	
+.dropbtn{
+	font-size:12px;
+    padding-top:5px;
+    padding-left:3px;
+    padding-right:5px;
+    width:125px;
+	height:25px; 
+	}
+	
+  </style>
+</head>
+
+<body>
+  <header>
+    <br>
+
+    <div class="acacia">
+      Acacia slimming club
+
+      <ul class="description">
+        <li>
+          <a href="./enrol.html">Enrol</a>
+        </li>
+
+        <li>
+          <a href="./login.html">Log in</a>
+        </li>
+        <li>
+          <a href="./index.html">Services</a>
+        </li>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+		   <li>
+          <a class="selected" href="./setup_day.html">Start the day</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <br>
+ 
+  <div class="row">
+    <div class="column">
+	  <!-- look in next column for calories, etc
+	       nutrient type, etc -->
+    Name meal: 
+	use the modal for daily input and new recipes
+	  <table class="meals">
+	  <caption id="mealinputs">Input meals&emsp;
+	  <button>New Recipe</button>
+	  <input type="submit" name="savedata "value="Save new inputs"></input>&emsp;
+	  
+	  </caption>
+	 	  <tr>
+	  <td id="when">Time</td><td id="what">Description</td>
+	  <td id="howmuch">Amount</td><td id="gram">Grams</td>
+	   </tr><tr> 
+<td><input type="text" id="time01" name="time01"</td> 
+<td><input type="text" id="what01" name="what01"</td> 
+<td><input type="text" id="amount01" name="amount01"</td> 
+<td><input type="text" id="weight01" name="weight01"</td></tr><tr> 
+<td><input type="text" id="time02" name="time02"</td> 
+<td><input type="text" id="what02" name="what02"</td> 
+<td><input type="text" id="amount02" name="amount02"</td> 
+<td><input type="text" id="weight02" name="weight02"</td></tr><tr> 
+<td><input type="text" id="time03" name="time03"</td> 
+<td><input type="text" id="what03" name="what03"</td> 
+<td><input type="text" id="amount03" name="amount03"</td> 
+<td><input type="text" id="weight03" name="weight03"</td></tr>
+<tr> 
+<td><input type="text" id="time04" name="time04"</td> 
+<td><input type="text" id="what04" name="what04"</td> 
+<td><input type="text" id="amount04" name="amount04"</td> 
+<td><input type="text" id="weight04" name="weight04"</td></tr>
+<tr> 
+<td><input type="text" id="time05" name="time05"</td> 
+<td><input type="text" id="what05" name="what05"</td> 
+<td><input type="text" id="amount05" name="amount05"</td> 
+<td><input type="text" id="weight05" name="weight05"</td></tr>
+<tr> 
+<td><input type="text" id="time06" name="time06"</td> 
+<td><input type="text" id="what06" name="what06"</td> 
+<td><input type="text" id="amount06" name="amount06"</td> 
+<td><input type="text" id="weight06" name="weight06"</td></tr>
+<tr> 
+<td><input type="text" id="time07" name="time07"</td> 
+<td><input type="text" id="what07" name="what07"</td> 
+<td><input type="text" id="amount07" name="amount07"</td> 
+<td><input type="text" id="weight07" name="weight07"</td></tr>
+<tr> 
+<td><input type="text" id="time08" name="time08"</td> 
+<td><input type="text" id="what08" name="what08"</td> 
+<td><input type="text" id="amount08" name="amount08"</td> 
+<td><input type="text" id="weight08" name="weight08"</td></tr>
+<tr>
+<td><input type="text" id="time09" name="time09"</td> 
+<td><input type="text" id="what09" name="what09"</td> 
+<td><input type="text" id="amount09" name="amount09"</td> 
+<td><input type="text" id="weight09" name="weight09"</td></tr>
+<tr> 
+<td><input type="text" id="time10" name="time10"</td> 
+<td><input type="text" id="what10" name="what10"</td> 
+<td><input type="text" id="amount10" name="amount10"</td> 
+<td><input type="text" id="weight10" name="weight10"</td></tr>
+
+	  </table>
+	  <div class="c8"><br></div>
+    </div>
+	  <div class="column">
+
+     <p>meal suggestions (with sideways scroll)</p>
+
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="./acaciaimages/fishchippea.jpg" style="width:90%">
+  <div class="text">fish and chips</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="./acaciaimages/bacon.jpg" style="width:100%">
+  <div class="text">bacon breakfast</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="./acaciaimages/fishchipsauce.jpg" style="width:100%">
+  <div class="text">fish & chips, with sauce</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="./acaciaimages/s&teakchip.jpg" style="width:100%">
+  <div class="text">steak & chips</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+  </div>
+
+</div>
+
+
+  <nav>
+    <ul id="parent">
+      <li>
+        <a href="./setup_day.html">Contact us</a>
+      </li>
+
+      <li>
+        <a href="./setup_day.html">User agreement</a>
+      </li>
+
+      <li>
+        <a href="./setup_day.html">Privacy statement</a>
+      </li>
+
+      <li>
+        <a href="./setup_day.html">Input meal data</a>
+      </li>
+
+      <li>
+        <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/528193/Eatwell_guide_colour.pdf">
+     Eatwell</a>
+      </li>
+
+      <li>
+        <a href="https://www.nhs.uk/live-well/healthy-weight/start-the-nhs-weight-loss-plan/">NHS diet plan</a>
+        </li>
+    </ul>
+  </nav>
+  <br>
+<!--   updated Oct 2018 
+  <br>consider using w3school parallax view somewhere
+  <!-- show the weekly weight loss needed, and the daily calorie intake necessary-->
+  <!-- Trigger/Open The Modal --
+<button id="myBtn">How to / info box</button>
+
+<!-- The Modal -- 
+<div id="myModal" class="modal">
+
+  <!-- Modal content --
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>can put instruction here, or, information, tip of the day, etc</p>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+-->
+    </div>
+  </div>
+</body>
+</html>
